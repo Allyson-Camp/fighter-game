@@ -1,11 +1,12 @@
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(3, 35, 30);
-    --primary-font:'Loved by the King', cursive; color: rgb(236, 225, 245);
+    --primary-font: 'Loved by the King', cursive;
+    color: rgb(236, 225, 245);
 }
 
 body {
-    font-family:'Loved by the King', cursive;
+    font-family: 'Loved by the King', cursive;
     background: url(../assets/castle-img.jpg);
     background-size: cover;
     display: grid;
@@ -26,8 +27,6 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-
-
 main {
     display: flex;
     justify-content: space-around;
@@ -45,7 +44,7 @@ main {
 #lives {
     background-color: rgb(208, 217, 181);
     border-radius: 10px;
-    text-align:center
+    text-align: center;
 }
 
 h2 {
@@ -64,7 +63,7 @@ h2 {
 
 h3 {
     background-color: rgb(77, 81, 144);
-    color:rgb(208, 217, 181);
+    color: rgb(208, 217, 181);
     border-radius: 10px;
     font-size: 20px;
     text-align: center;
@@ -74,7 +73,8 @@ h3 {
     background-color: rgb(236, 225, 245);
 }
 
-#ghost-button{
-    background-color:rgb(236, 225, 245);
-    font-family: 'Loved by the King', cursive; color:black;;
+#ghost-button {
+    background-color: rgb(236, 225, 245);
+    font-family: 'Loved by the King', cursive;
+    color: black;
 }

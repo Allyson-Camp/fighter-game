@@ -29,20 +29,20 @@
 
 <body>
     <header>
-        
+        <h1>How many ghosts can you catch?</h1>
     </header>
 
     <main>
         <section class="player-container">
-            <section class="ghost-count">
+            <section id="ghost-count">
                 <h1>You have caught 0 ghosts</h1>
             </section>
-            <h2 id="lives">
+            <h2>
                 Your lives: <span id="player-lives">10</span>
             </h2>
-            <div>
+            <section>
                 <img src="assets/player-img.png" class="player-img" id="vampire-img"/>
-            </div>
+            </section>
         </section>
 
         <section class="add-ghost-container">
@@ -51,7 +51,7 @@
             <button id="ghost-button">Hunt ghost</button>
         </section>
 
-        <div></div>
+        <div class="ghosts">array of ghosts</div>
 
     </main>
 
