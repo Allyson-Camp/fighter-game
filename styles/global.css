@@ -1,14 +1,14 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
-    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
-        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    --header-background: rgb(3, 35, 30);
+    --primary-font:'Loved by the King', cursive; color: rgb(255, 255, 255);
 }
 
 body {
-    font-family: var(--primary-font);
-    background: var(--background);
-    display: grid;
+    font-family:'Loved by the King', cursive;
+    background: url(../assets/castle-img.jpg);
+    background-size: cover;
+    display: flex;
     grid-template-rows: auto 1fr;
 }
 
