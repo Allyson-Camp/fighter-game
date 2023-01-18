@@ -28,12 +28,28 @@
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Ghost Hunter</h1>
+    <header id="ghost-count">
+        <h1>You have caught 0 ghosts</h1>
     </header>
 
     <main>
+
+        <section class="player-container">
+            <h2 id="lives">
+                Your lives: <span id="player-lives">10</span>
+            </h2>
+            <div>
+                <img src="assets/player-img.png" class="player-img" id="vampire-img"/>
+            </div>
+        </section>
+
+        <section class="add-ghost-container">
+            <h3>Create ghost:</h3>
+            <input id="ghost-input"/>
+            <button id="ghost-button">Hunt ghost</button>
+        </div>
+
+        <div></div>
 
     </main>
 
