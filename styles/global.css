@@ -1,7 +1,7 @@
 :root {
     --background: rgb(224, 234, 247);
     --header-background: rgb(3, 35, 30);
-    --primary-font:'Loved by the King', cursive; color: rgb(255, 255, 255);
+    --primary-font:'Loved by the King', cursive; color: rgb(236, 225, 245);
 }
 
 body {
@@ -29,29 +29,33 @@ header {
 
 
 main {
-    padding: 20px;
     display: flex;
     justify-content: space-around;
 }
 
-#ghost-count {
+.ghost-count {
     background-color: rgb(62, 100, 86);
     border-radius: 10px;
     text-align: center;
-    margin: 50px;
+    margin: 20px;
     justify-content: center;
-    width: 300px
+    font-size: 20px;
 }
 
 #lives {
-    background-color: rgb(77, 81, 144);
+    background-color: rgb(208, 217, 181);
     border-radius: 10px;
     text-align:center
 }
 
+h2 {
+    color: black;
+}
 .player-container {
     width: 250px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .player-img {
@@ -59,7 +63,18 @@ main {
 }
 
 h3 {
-    color:rgb(255, 255, 255);
-    font-size: 50px;
-    margin-bottom: ;
+    background-color: rgb(77, 81, 144);
+    color:rgb(208, 217, 181);
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#ghost-input {
+    background-color: rgb(236, 225, 245);
+}
+
+#ghost-button{
+    background-color:rgb(236, 225, 245);
+    font-family: 'Loved by the King', cursive; color:black;;
 }
