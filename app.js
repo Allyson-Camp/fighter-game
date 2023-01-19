@@ -52,7 +52,7 @@ function displayGhosts(){
 
         newGhostEl.addEventListener('click', () => {
             if (playerLives === 0){
-                alert('Rest In Peace 🥀');
+                alert('R.I.P 🥀');
                 return;
             }
 //player hunting/scaring
