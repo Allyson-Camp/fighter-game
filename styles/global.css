@@ -60,7 +60,7 @@ h2 {
     flex-direction: column;
 }
 
-.player-img {
+.vampire-img {
     width: 350px;
 }
 
@@ -80,4 +80,9 @@ h3 {
     background-color: rgb(236, 225, 245);
     font-family: 'Loved by the King', cursive;
     color: black;
+}
+
+/* flip img */
+.rip {
+    transform: rotate(-115deg);
 }

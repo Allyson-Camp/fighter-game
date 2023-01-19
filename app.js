@@ -1,17 +1,18 @@
 /* Imports */
-
+import { renderGhost } from './utils.js';
 /* Get DOM Elements */
-const ghostsEl = document.getElementById('ghosts');
+const ghostEl = document.getElementById('ghost');
 const ghostInputEl = document.getElementById('ghost-input');
 const ghostBttnEl = document.getElementById('ghost-bttn');
 const playerLivesEl = document.getElementById('player-lives');
 const caughtCountEl = document.getElementById('caught-count');
+const vampireImgEl = document.getElementById('vampire-img');
 
 /* State */
 let ghostsCaught = 0;
 let playerLives = 10;
 
-const ghosts = [
+const ghostList = [
     {
         name: 'Lock',
         lives: 3,
@@ -29,49 +30,62 @@ const ghosts = [
 
 //ghost bttn 'click'
 ghostBttnEl.addEventListener('click', () => {
-    console.log('addign name');
+    
     const ghostName = ghostInputEl.value; 
     const newGhostEl = {
         name: ghostName || `Dearly Departed ${Math.floor(Math.random() * 100)}`,
         lives: 3, //ask about lives
     };
 //push to array
-    ghostsEl.push(newGhostEl);
+    ghostEl.push(newGhostEl);
     ghostInputEl.value = '';
 //call function to display, do next!
     displayGhosts();
 });
 
-// newGhostEl 'click' -- inside display function??
-// newGhostEl.addEventListener('click', () => {
-
-// });
-
 /* Display Functions */
 function displayGhosts(){
-ghostsEl.textContent = '';
+    ghostEl.textContent = '';
 
-for (let ghost of ghosts)
+    for (let ghost of ghosts) {
+        const newGhostEl = renderGhost(ghost);
 
-};
+        newGhostEl.addEventListener('click', () => {
+            if (playerLives === 0){
+                alert('Rest In Peace 🥀');
+                return;
+            }
+//player hunting/spooking
+            if (Math.random() > .5) {
+                alert('You spooked' + ghost.name);
+                ghost.lives--;
+
+                if (ghost.lives === 0) {
+                    ghostsCaught++;
+                    caughtCountEl.textContent = ghostsCaught;
+                }
+            } else {
+                alert('You missed ' + ghost.name);
+            }
+            
+            if (Math.random() > .5) {
+                alert(ghost.name + 'swooped in and spooked you');
+                playerLives--;
+
+                if (playerLives === 0) {
+                    vampireImgEl.classList.add('rip');
+                }
+            } else {
+                alert(ghost.name + 'swooped in but missed you');
+            }
+
+            playerLivesEl.textContent = playerLives;
+        
+            displayGhosts();
+        });
+    
+        ghostEl.append(newGhostEl);
+    }
+}
 // (don't forget to call any display functions you want to run on page load!)
-
-// newFriendEl.addEventListener('click', () => {
-//     if (friend.satisfaction < 3 && mushroomCount > 0) {
-//         //and if the friend's satisfaction level is below 3 and you have mushrooms left DONE
-//         friend.satisfaction++;
-//         mushroomCount--;
-//         //increment the friends satisfaction and decrement your mushrooms DONE
-//         //clear out and display the updated friends and mushrooms (hint: displayFriends, displayMushrooms)
-//         displayFriends();
-//         displayMushrooms();
-
-//         //alerts to go forage for more or person is full
-//     } else if (friend.satisfaction === 3) {
-//         alert('All full! Give mushrooms to someone else!');
-//         return;
-//     } else if (mushroomCount === 0) {
-//         alert('Go forage for another mushroom!');
-//         return;
-//     }
-// });
+displayGhosts();
