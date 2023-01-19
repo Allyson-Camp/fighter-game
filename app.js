@@ -12,7 +12,7 @@ const vampireImgEl = document.getElementById('vampire-img');
 let ghostsCaught = 0;
 let playerLives = 10;
 
-const ghostList = [
+const ghosts = [
     {
         name: 'Lock',
         lives: 3,
