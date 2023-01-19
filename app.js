@@ -56,7 +56,7 @@ function displayGhosts(){
                 return;
             }
 //player hunting/scaring
-            if (Math.random() > .9) {
+            if (Math.random() > .5) {
                 alert('You scared ' + ghost.name);
                 ghost.lives--;
 
@@ -68,7 +68,7 @@ function displayGhosts(){
                 alert('You missed ' + ghost.name);
             }
             
-            if (Math.random() > .1) {
+            if (Math.random() > .5) {
                 alert(ghost.name + ' swooped in and scared you');
                 playerLives--;
 
