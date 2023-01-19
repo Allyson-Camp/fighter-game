@@ -47,20 +47,21 @@ ghost divs: 3 default ghosts
 - lifeCountEl
 
 ## state
-player lifeCount
-- alert when ghost 'scares' player
-ghosts (lifeCount, name, emoji)
+<!-- player lifeCount
+- alert when ghost 'scares' player -->
+
+<!-- ghosts (lifeCount, name, emoji)
  - alerts
  - emoji changes from ghost 👻  to tombstone 🪦 when ghost lives = 0
- - default ghost 'Dearly Departed#1-50' w/ 3 lives
-caughtGhostsEl counter
- - adds 1 when ghost lives === 0
+ - default ghost 'Dearly Departed#1-50' w/ 3 lives -->
+ 
+<!-- caughtGhostsEl counter
+ - adds 1 when ghost lives === 0 -->
 
-
-## events 
+<!-- ## events 
 player clicks hunt ghost button
 - new ghost is made w/ default or chosen name, assigned 3 lives
-- ghost is pushed into the array
+- ghost is pushed into the array -->
 
 player clicks on ghost
 - player scares or misses ghost (alert)
