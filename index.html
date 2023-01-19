@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -34,11 +35,11 @@
 
     <main>
         <section class="player-container">
-            <section id="ghost-count">
-                <h1>You have caught 0 ghosts</h1>
+            <section id="ghosts-caught">
+                <h1>You have caught <span id="caught-count">0</span> ghosts</h1>
             </section>
             <h2>
-                Your lives: <span id="player-lives">10</span>
+                You have <span id="player-lives">10</span> lives left
             </h2>
             <section>
                 <img src="assets/player-img.png" class="player-img" id="vampire-img"/>
@@ -48,10 +49,10 @@
         <section class="add-ghost-container">
             <h3>Create a new ghost:</h3>
             <input id="ghost-input"/>
-            <button id="ghost-button">Hunt ghost</button>
+            <button id="ghost-bttn">Hunt ghost</button>
         </section>
 
-        <div class="ghosts">array of ghosts</div>
+        <div id="ghosts"></div>
 
     </main>
 

@@ -32,8 +32,8 @@ main {
     justify-content: space-around;
 }
 
-.ghost-count {
-    background-color: rgb(62, 100, 86);
+#ghosts-caught {
+    background-color:  rgb(62, 100, 86);;
     border-radius: 10px;
     text-align: center;
     margin: 20px;
@@ -41,14 +41,17 @@ main {
     font-size: 20px;
 }
 
-#lives {
-    background-color: rgb(208, 217, 181);
-    border-radius: 10px;
-    text-align: center;
+#player-lives {
+    
+   
 }
 
 h2 {
     color: black;
+    background-color: rgb(208, 217, 181);
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
 }
 .player-container {
     width: 250px;
