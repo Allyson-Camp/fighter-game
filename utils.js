@@ -14,10 +14,10 @@ export function renderGhost(ghostList) {
         newGhostEl.classList.add('hide');
     }
 
-
     newGhostEl.classList.add('ghost');
 
     newGhostEl.append(nameEl, livesEl, emojiEl);
 
     return newGhostEl;
 }
+

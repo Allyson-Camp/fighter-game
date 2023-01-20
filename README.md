@@ -86,3 +86,5 @@ player clicks on ghost
     Ideas for disabling:
         pointer-events: none;
         disable button;
+
+

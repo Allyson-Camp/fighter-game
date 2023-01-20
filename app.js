@@ -28,17 +28,22 @@ const ghosts = [
 ];
 /* Events */
 
-//ghost bttn 'click'
+
 ghostBttnEl.addEventListener('click', () => {
     const ghostName = ghostInputEl.value;
     const newGhostEl = {
-        name: ghostName || `Dearly Departed ${Math.floor(Math.random() * 100)}`,
-        lives: 5, //ask about lives
+        name: ghostName || `Dearly Departed ${Math.floor(Math.random() * 50)}`,
+        lives: 5, 
     };
-    //push to array
     ghosts.push(newGhostEl);
     ghostInputEl.value = '';
-    //call function to display, do next!
+    
+    if (playerLives === 0) {
+        vampireImgEl.classList.add('rip');
+        alert('R.I.P 🥀');
+        return;
+    } 
+    
     displayGhosts();
 });
 
@@ -51,30 +56,27 @@ function displayGhosts() {
 
         newGhostEl.addEventListener('click', () => {
             if (playerLives === 0) {
+                vampireImgEl.classList.add('rip');
                 alert('R.I.P 🥀');
                 return;
             }
-            //player hunting/scaring
-            if (Math.random() > 0.5) {
+           
+            if (Math.random() > 0.9) {
                 alert('You scared ' + ghost.name);
                 ghost.lives--;
 
                 if (ghost.lives === 0) {
                     ghostsCaught++;
-                    // caughtCountEl.textContent = `You have caught ${caughtCountEl} ghosts`;
                     caughtCountEl.textContent = ghostsCaught;
                 }
             } else {
                 alert('You missed ' + ghost.name);
             }
 
-            if (Math.random() > 0.5) {
+            if (Math.random() > 0.1) {
                 alert(ghost.name + ' swooped in and scared you');
                 playerLives--;
 
-                if (playerLives === 0) {
-                    vampireImgEl.classList.add('rip');
-                }
             } else {
                 alert(ghost.name + ' swooped in but missed you');
             }
@@ -87,5 +89,15 @@ function displayGhosts() {
         ghostListEl.append(newGhostEl);
     }
 }
+
+// function disable() {
+//     if (playerLives === 0) {
+//         vampireImgEl.classList.add('hide');
+//         ghostBttnEl.classList.add('hide');
+//         ghostListEl.classList.add('hide');
+//         ghostInputEl.classList.add('hide');
+//     }
+// }
 // (don't forget to call any display functions you want to run on page load!)
 displayGhosts();
+// disable();
