@@ -30,45 +30,45 @@ const ghosts = [
 
 //ghost bttn 'click'
 ghostBttnEl.addEventListener('click', () => {
-    
-    const ghostName = ghostInputEl.value; 
+    const ghostName = ghostInputEl.value;
     const newGhostEl = {
         name: ghostName || `Dearly Departed ${Math.floor(Math.random() * 100)}`,
         lives: 5, //ask about lives
     };
-//push to array
+    //push to array
     ghosts.push(newGhostEl);
     ghostInputEl.value = '';
-//call function to display, do next!
+    //call function to display, do next!
     displayGhosts();
 });
 
 /* Display Functions */
-function displayGhosts(){
+function displayGhosts() {
     ghostListEl.textContent = '';
 
     for (let ghost of ghosts) {
         const newGhostEl = renderGhost(ghost);
 
         newGhostEl.addEventListener('click', () => {
-            if (playerLives === 0){
+            if (playerLives === 0) {
                 alert('R.I.P 🥀');
                 return;
             }
-//player hunting/scaring
-            if (Math.random() > .5) {
+            //player hunting/scaring
+            if (Math.random() > 0.5) {
                 alert('You scared ' + ghost.name);
                 ghost.lives--;
 
                 if (ghost.lives === 0) {
                     ghostsCaught++;
+                    // caughtCountEl.textContent = `You have caught ${caughtCountEl} ghosts`;
                     caughtCountEl.textContent = ghostsCaught;
                 }
             } else {
                 alert('You missed ' + ghost.name);
             }
-            
-            if (Math.random() > .5) {
+
+            if (Math.random() > 0.5) {
                 alert(ghost.name + ' swooped in and scared you');
                 playerLives--;
 
@@ -80,10 +80,10 @@ function displayGhosts(){
             }
 
             playerLivesEl.textContent = playerLives;
-        
+
             displayGhosts();
         });
-    
+
         ghostListEl.append(newGhostEl);
     }
 }

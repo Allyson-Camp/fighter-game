@@ -11,7 +11,9 @@ export function renderGhost(ghostList) {
         emojiEl.textContent = '👻';
     } else {
         emojiEl.textContent = '🪦';
+        newGhostEl.classList.add('hide');
     }
+
 
     newGhostEl.classList.add('ghost');
 
