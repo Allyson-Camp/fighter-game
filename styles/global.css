@@ -1,13 +1,14 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
-    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
-        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    --header-background: rgb(3, 35, 30);
+    --primary-font: 'Risque', cursive;
+    color: rgb(236, 225, 245);
 }
 
 body {
-    font-family: var(--primary-font);
-    background: var(--background);
+    font-family: 'Risque', cursive;
+    background: url(../assets/castle-img.jpg);
+    background-size: cover;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -26,10 +27,85 @@ header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-header .logo {
-    height: 100%;
+main {
+    display: flex;
+    justify-content: space-around;
 }
 
-main {
-    padding: 20px;
+#ghosts-caught {
+    background-color: rgb(62, 100, 86);
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    justify-content: center;
+    font-size: 20px;
+    padding: 2px;
+}
+
+h2 {
+    color: black;
+    background-color: rgb(208, 217, 181);
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+.player-container {
+    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.vampire-img {
+    width: 350px;
+}
+
+h3 {
+    background-color: rgb(77, 81, 144);
+    color: rgb(208, 217, 181);
+    border-radius: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#ghost-input {
+    background-color: rgb(236, 225, 245);
+}
+
+#ghost-button {
+    background-color: rgb(236, 225, 245);
+    font-family: 'Risque', cursive;
+    color: black;
+}
+
+/* flip img */
+.rip {
+    transform: rotate(450deg);
+}
+
+.vampire-img {
+    transition: transform 1s ease-in-out;
+}
+
+.ghost {
+    font-size: 20px;
+    background-color: rgb(62, 100, 86);
+    border: solid 2px rgb(208, 217, 181);
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.ghost:hover {
+    background: rgb(77, 81, 144);
+}
+
+.hide{
+    display: none;
 }

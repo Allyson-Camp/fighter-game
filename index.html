@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -8,13 +9,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- title and favicon -->
-    <title>Web App</title>
+    <title>Ghost Hunter</title>
     <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
     <!-- js -->
     <script type="module" src="app.js"></script>
 
     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Risque&display=swap" rel="stylesheet">
     <!-- see https://fonts.google.com/ -->
 
     <!-- css -->
@@ -26,11 +30,32 @@
 
 <body>
     <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
+        <h1>How many ghosts can you catch?</h1>
     </header>
 
     <main>
+        <section class="player-container">
+            <section id="ghosts-caught">
+                <h1>You caught <span id="caught-count">0</span> ghosts</h1>
+            </section>
+            <h2>
+                You have <span id="player-lives">10</span> lives left
+            </h2>
+            <section>
+                <img src="assets/player-img.png" class="vampire-img" id="vampire-img"/>
+            </section>
+        </section>
+
+        <section class="add-ghost-container">
+            <h3>Create a new ghost:</h3>
+            <input id="ghost-input"/>
+            <button id="ghost-bttn">Hunt ghost</button>
+        </section>
+
+        <section>
+            <ul id="ghost-list"></ul>
+        </section>
+        
 
     </main>
 

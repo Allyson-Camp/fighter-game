@@ -1,4 +1,6 @@
-## The Golden Rule:
+![wireframe for fighter-game](./assets/ghost-hunter-wireframe.png)
+
+<!-- ## The Golden Rule:
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
@@ -24,4 +26,65 @@ Additional considerations:
     -   What arrays might you need?
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+-   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?) -->
+
+PLan
+
+## html
+input/button
+- how player types in new name and submits to create new ghost
+
+div for player: houses the player img and life count tracker el
+- lifeCountEl
+- img of player
+
+caughtGhosts el
+- tracks how many ghosts player has caught
+
+ghost divs: 3 default ghosts
+- nameEl
+- emojiEl
+- lifeCountEl
+
+## state
+<!-- player lifeCount
+- alert when ghost 'scares' player -->
+
+<!-- ghosts (lifeCount, name, emoji)
+ - alerts
+ - emoji changes from ghost 👻  to tombstone 🪦 when ghost lives = 0
+ - default ghost 'Dearly Departed#1-50' w/ 3 lives -->
+ 
+<!-- caughtGhostsEl counter
+ - adds 1 when ghost lives === 0 -->
+
+<!-- ## events 
+player clicks hunt ghost button
+- new ghost is made w/ default or chosen name, assigned 3 lives
+- ghost is pushed into the array -->
+
+player clicks on ghost
+- player scares or misses ghost (alert)
+- ghost retaliates and scares or misses player (alert)
+- lives of whoever is scared goes down, no lives lost if missed
+- photo for ghost changes when lives === 0
+- player img flips when lives === 0 & game over (alert)
+
+    ## alerts
+    - you tried to hit (ghostname) but missed
+    - (ghostname) tried to hit you but missed
+    - (ghostname) hit you
+    - you hit (ghostname)
+    - GAME OVER
+        --when player lives = 0
+
+## from rubric
+- On submitting the 'challenge goblin' form, add a new goblin object (with 3 HP and a name) to state and display it to the DOM
+- On clicking a goblin, it should tell the user whether they hit the goblin or not, then update state and DOM appropriately with new HP
+- On clicking a goblin, it should tell the user whether the goblin hit the player or not, then update state and DOM appropriately with new HP
+- disable everything when GAME OVER!!!!! <<<look up
+    Ideas for disabling:
+        pointer-events: none;
+        disable button;
+
+
